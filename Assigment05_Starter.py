@@ -17,7 +17,7 @@ lstTable = []
     # in "ToDo.txt" into a python Dictionary.
     # Add the each dictionary "row" to a python list "table"
 
-objData = open(objFileName, "r")
+objData = open(objFileName, "r+")
 for line in objData:
     (val1,val2) = line.split(",")
     dicRow [str("Task")] = val1
@@ -38,7 +38,7 @@ while(True):
 
     # Step 3 -Show the current items in the table
     if (strChoice.strip() == '1'):
-        objData = open(objFileName, "r")
+        objData = open(objFileName, "r+")
         for line in objData:
             (key, val) = line.split(",")
             dicRow[str(key)] = val
