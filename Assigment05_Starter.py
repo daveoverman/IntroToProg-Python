@@ -1,10 +1,9 @@
 #-------------------------------------------------#
 # Title: Working with Dictionaries
-# Dev:   RRoot
-# Date:  July 16, 2012
+# Dev:   Daveoverman
+# Date:  August 12, 2019
 # ChangeLog: (Who, When, What)
-#   RRoot, 11/02/2016, Created starting template
-#   <YOUR NAME HERE>, ???, Added code to complete assignment 5
+# David Overman, 8/12/2019, Added code to try assignment 5
 #https://www.tutorialspoint.com/python/python_dictionary.htm
 #-------------------------------------------------#
 
