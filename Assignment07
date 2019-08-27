@@ -1,0 +1,40 @@
+#Get User input data - includes minor sanitization of input to assure math is possible
+    #number 1
+import pickle
+NumberOne = input('Please input your first number:')
+while True:
+    try:
+        float(NumberOne)
+    except Exception as e:
+        print("Error!", e.__str__())
+        NumberOne = input('Please input your first number:');
+    break
+
+NumberTwo = input('Please input your second number:');
+while(True):
+    try:
+        float(NumberTwo)
+    except ValueError:
+        print ("Oops! That's not a valid number! try again!");
+        NumberTwo = input('Please input your second number:');
+    try:
+        float(NumberOne)/float(NumberTwo)
+    except Exception as e:
+        print ("Error!", e.__str__())
+        NumberTwo = input('Please input your second number:');
+    finally:
+        print("Your numbers are", NumberTwo,"and", NumberOne)
+        break
+
+lstNum = [NumberOne,NumberTwo]
+
+objFile = open("PickleOne.dat", "ab")
+pickle.dump(lstNum,objFile)
+objFile.close()
+
+objFile = open("PickleOne.dat", "rb")
+objFileData = pickle.load(objFile)
+print (str(objFileData))
+objFile.close()
+
+print("You reached this point")
